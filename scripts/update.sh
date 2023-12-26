@@ -44,6 +44,7 @@ for FRAMEWORK in "$FRAMEWORKS"/*; do
     else
         # Run npm install in the background
         npm install > /dev/null 2>&1 &
+        npm update > /dev/null 2>&1 &
         # Call spinner function with the background process ID
         spinner $!
         tput setaf 2
