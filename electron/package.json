@@ -1,0 +1,65 @@
+{
+  "name": "tron-forge",
+  "productName": "tron-forge",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build:css && electron-forge start",
+    "build:css": "postcss src/tailwind.css -o src/styles.css",
+    "watch:css": "onchange 'src/*.css' -- npm run build:css",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": "2Hasan2",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "tron_forge"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "electron-squirrel-startup": "^1.0.0",
+    "onchange": "^7.1.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.50",
+    "@electron-forge/maker-deb": "^6.0.0-beta.50",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.50",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.50",
+    "@electron-forge/maker-zip": "^6.0.0-beta.50",
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.2",
+    "devtron": "^1.4.0",
+    "electron": "^28.1.0",
+    "postcss": "^8.4.32",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.0"
+  }
+}

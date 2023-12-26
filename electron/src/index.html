@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+
+  <title>Your Electron App</title>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Header -->
+  <header class="bg-gray-500 text-white p-4">
+    <h1 class="text-2xl font-bold">Tailwind CSS in Electron</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto mt-8">
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">Text Styling</h2>
+      <p class="text-lg text-gray-700">This is a paragraph with Tailwind CSS styling.</p>
+      <a href="#" class="text-blue-500 hover:underline">Click me</a>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">Spacing</h2>
+      <div class="p-4 border rounded-md bg-white">
+        <p class="mb-2">This div has padding and a border.</p>
+        <button class="px-4 py-2 bg-blue-500 text-white rounded-md">Click me</button>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">Responsive Design</h2>
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/2 p-4 bg-gray-200">
+          <p>This column is full width on small screens and half width on medium screens and above.</p>
+        </div>
+        <div class="md:w-1/2 p-4 bg-gray-300">
+          <p>This column is half width on small screens and full width on medium screens and above.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-4 mt-8">
+    <p>&copy; 2023 Your Electron App</p>
+  </footer>
+
+  <script>
+  </script>
+</body>
+</html>
